@@ -10,29 +10,54 @@ namespace Aprendiendo_sharp
     {
         static void Main(string[] args)
         {
-            //Condicionales
+            //Metodos 
+            IngreasrNumeros();
+            Console.ReadLine();
+        }
 
-            int x,y;
-            Console.WriteLine("Ingrese el primer numero");
-            x= int.Parse(Console.ReadLine());
+        static void IngreasrNumeros()
+        {
+            Console.WriteLine("Ingrese el primer numero :");
+            int x=int.Parse(Console.ReadLine());
+            Console.WriteLine("Ingrese el segundo numero :");
+            int y=int.Parse(Console.ReadLine());
 
-            Console.WriteLine("Ingrese el segundo numero");
-            y = int.Parse(Console.ReadLine());
+            Console.WriteLine("la suma es :"+sumar(x,y));
+            Console.WriteLine("La resta es :"+restar(x, y));
+            Console.WriteLine("La multiplicacion es :"+multiplicar(x, y));
 
-            if (x > y)
+            if (y == 0)
             {
-                Console.WriteLine("El numero " + x + " es mayor que " + y);
-            }
-            else if(x == y)
-            {
-                Console.WriteLine("El numero "+x+" es igual que "+y);
+                Console.WriteLine("Error!, Ingrese otro numero diferente a 0");
             }
             else
             {
-                Console.WriteLine("El numero " + x + " es menor que " + y);
+                Console.WriteLine("La division es :" + dividir(x, y));
             }
 
-            Console.ReadLine();
+   
+
+        }
+
+        static int sumar(int x, int y)
+        {
+            return x + y;
+        }
+        
+        static int restar(int x, int y)
+        {
+            return (x - y);
+
+        }
+        
+        static int multiplicar(int x, int y)
+        {
+            return x * y;
+        }
+
+        static float dividir(float x, float y)
+        {
+            return x / y;
         }
     }
 }
