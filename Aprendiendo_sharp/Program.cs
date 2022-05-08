@@ -6,58 +6,20 @@ using System.Threading.Tasks;
 
 namespace Aprendiendo_sharp
 {
-    internal class Program
+    internal class Program // Esto es una clase
     {
-        static void Main(string[] args)
+        //Para agregar una variable float se pone al ultimo una F
+        static float pi = 3.1416f;
+        static String nombre="Oscar";
+
+        static void Main(string[] args) //Esto es un metodo
         {
-            //Metodos 
-            IngreasrNumeros();
+            //Podemos leer las variables estaticas
+            Console.WriteLine(pi);
+            Console.WriteLine("Bienvenido {0} ", nombre);
             Console.ReadLine();
-        }
-
-        static void IngreasrNumeros()
-        {
-            Console.WriteLine("Ingrese el primer numero :");
-            int x=int.Parse(Console.ReadLine());
-            Console.WriteLine("Ingrese el segundo numero :");
-            int y=int.Parse(Console.ReadLine());
-
-            Console.WriteLine("la suma es :"+sumar(x,y));
-            Console.WriteLine("La resta es :"+restar(x, y));
-            Console.WriteLine("La multiplicacion es :"+multiplicar(x, y));
-
-            if (y == 0)
-            {
-                Console.WriteLine("Error!, Ingrese otro numero diferente a 0");
-            }
-            else
-            {
-                Console.WriteLine("La division es :" + dividir(x, y));
-            }
-
-   
 
         }
 
-        static int sumar(int x, int y)
-        {
-            return x + y;
-        }
-        
-        static int restar(int x, int y)
-        {
-            return (x - y);
-
-        }
-        
-        static int multiplicar(int x, int y)
-        {
-            return x * y;
-        }
-
-        static float dividir(float x, float y)
-        {
-            return x / y;
-        }
     }
 }
